@@ -1,5 +1,5 @@
 # Import 3rd party modules
-from flask import Flask
+from flask import Flask, render_template
 
 # Create app instance of Flask
 app = Flask(__name__)
@@ -7,7 +7,11 @@ app = Flask(__name__)
 # Define functions mapped to each route
 @app.route('/')
 def home():
-    return "Hey there!"
+    return render_template('home.html')
+
+@app.route('/about')
+def about():
+	return render_template('about.html')
 
 # Run App
 if __name__ == "__main__":
