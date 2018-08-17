@@ -108,10 +108,12 @@ dropdown content is shown
 /*BOTTOM NAV BAR*/
 /* Place the navbar at the bottom of the page, and make it stick */
 .bottom-navbar {
-    background-color: #000;
-    overflow: hidden;
-    position: fixed;
-    margin-bottom: 0px;
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+   background:#999;
 }
 
 /* Style the links inside the navigation bar */
@@ -125,24 +127,8 @@ dropdown content is shown
     font-size: 17px;
 }
 
-.bottom-navbar p {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
 /* Change the color of links on hover */
 .bottom-navbar a:hover {
     background-color: #ddd;
     color: black;
-}
-
-/* Add a color to the active/current link */
-.bottom-navbar a.active {
-    background-color: #4CAF50;
-    color: white;
 }
