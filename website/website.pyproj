@@ -36,6 +36,7 @@
     <Folder Include="website\static\" />
     <Folder Include="website\static\content\" />
     <Folder Include="website\static\fonts\" />
+    <Folder Include="website\static\images\" />
     <Folder Include="website\static\scripts\" />
     <Folder Include="website\templates\" />
   </ItemGroup>
@@ -48,6 +49,7 @@
     <Content Include="website\static\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="website\static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="website\static\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="website\static\images\cassady_portrait.jpg" />
     <Content Include="website\static\scripts\bootstrap.js" />
     <Content Include="website\static\scripts\bootstrap.min.js" />
     <Content Include="website\static\scripts\jquery-1.10.2.intellisense.js" />
@@ -64,9 +66,13 @@
     <Content Include="website\static\scripts\respond.min.js" />
     <Content Include="website\static\scripts\_references.js" />
     <Content Include="website\templates\about.html" />
+    <Content Include="website\templates\awards.html" />
     <Content Include="website\templates\contact.html" />
     <Content Include="website\templates\index.html" />
     <Content Include="website\templates\layout.html" />
+    <Content Include="website\templates\projects.html" />
+    <Content Include="website\templates\transcripts.html" />
+    <Content Include="website\templates\work_history.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 

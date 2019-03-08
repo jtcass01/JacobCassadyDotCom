@@ -6,6 +6,11 @@ body {
     padding-bottom: 20px;
 }
 
+.center-img {
+    text-align: center;
+    display: block;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
