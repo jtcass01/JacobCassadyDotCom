@@ -37,7 +37,14 @@
     <Folder Include="website\static\content\" />
     <Folder Include="website\static\fonts\" />
     <Folder Include="website\static\images\" />
+    <Folder Include="website\static\transcripts\" />
     <Folder Include="website\static\scripts\" />
+    <Folder Include="website\static\transcripts\2013\" />
+    <Folder Include="website\static\transcripts\2014\" />
+    <Folder Include="website\static\transcripts\2015\" />
+    <Folder Include="website\static\transcripts\2016\" />
+    <Folder Include="website\static\transcripts\2017\" />
+    <Folder Include="website\static\transcripts\2018\" />
     <Folder Include="website\templates\" />
   </ItemGroup>
   <ItemGroup>
@@ -68,6 +75,18 @@
     <Content Include="website\static\scripts\respond.min.js" />
     <Content Include="website\static\scripts\work_history.js" />
     <Content Include="website\static\scripts\_references.js" />
+    <Content Include="website\static\transcripts\2013\fall.csv" />
+    <Content Include="website\static\transcripts\2014\fall.csv" />
+    <Content Include="website\static\transcripts\2014\spring.csv" />
+    <Content Include="website\static\transcripts\2014\summer.csv" />
+    <Content Include="website\static\transcripts\2015\fall.csv" />
+    <Content Include="website\static\transcripts\2015\spring.csv" />
+    <Content Include="website\static\transcripts\2016\fall.csv" />
+    <Content Include="website\static\transcripts\2016\spring.csv" />
+    <Content Include="website\static\transcripts\2016\summer.csv" />
+    <Content Include="website\static\transcripts\2017\summer.csv" />
+    <Content Include="website\static\transcripts\2018\fall.csv" />
+    <Content Include="website\static\transcripts\2018\spring.csv" />
     <Content Include="website\templates\about.html" />
     <Content Include="website\templates\awards_and_certifications.html" />
     <Content Include="website\templates\contact.html" />
