@@ -36,12 +36,12 @@ def projects():
         message=''
     )
 
-@app.route('/awards')
-def awards():
+@app.route('/awards_and_certifications')
+def awards_and_certifications():
     """Renders the awards page."""
     return render_template(
-        'awards.html',
-        title='Awards',
+        'awards_and_certifications.html',
+        title='Awards and Certifications',
         year=datetime.now().year,
         message=''
     )

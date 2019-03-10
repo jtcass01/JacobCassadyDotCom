@@ -50,6 +50,8 @@
     <Content Include="website\static\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="website\static\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="website\static\images\cassady_portrait.jpg" />
+    <Content Include="website\static\images\nasa_cas_design_thinking_course_certificate.jpg" />
+    <Content Include="website\static\scripts\awards_and_certifications.js" />
     <Content Include="website\static\scripts\bootstrap.js" />
     <Content Include="website\static\scripts\bootstrap.min.js" />
     <Content Include="website\static\scripts\jquery-1.10.2.intellisense.js" />
@@ -67,7 +69,7 @@
     <Content Include="website\static\scripts\work_history.js" />
     <Content Include="website\static\scripts\_references.js" />
     <Content Include="website\templates\about.html" />
-    <Content Include="website\templates\awards.html" />
+    <Content Include="website\templates\awards_and_certifications.html" />
     <Content Include="website\templates\contact.html" />
     <Content Include="website\templates\index.html" />
     <Content Include="website\templates\layout.html" />

@@ -1,0 +1,108 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+<center><h1>Awards</h1></center>
+
+<div class="award">
+    <h3>Ken Noah Outstanding Co-op/Intern Student Award</h3>
+    <h5>Awarded: Fall 2018</h5>
+    <h4><a href="http://www.kaceweb.net/wp/about/awards/">Award Description</a></h4>
+</div>
+
+
+<center><h1>Certifications</h1></center>
+
+<div class="certification">
+    <h3>NASA CAS Design Thinking Course</h3>
+    <h5>University of Virginia Darden School of Business</h5>
+    <h5>Issued August 2018</h5>
+    <h4>Description:</h4>
+    <p>
+        Participants apply design methodologies and innovation tools to a personally-selected challenge using a 15-step problem-solving process.
+        Videos, readings, and cases illustrated design thinking in gathering and identifying important insights about the needs and wants of others.
+        This information identified the attributes of an ideal solution.
+        Participants in Ideas to Action ask What if? to create new solutions to their own challenge.
+        Learners take those raw ideas, synthesize them into important concepts and move from ideation to experimentation.
+    </p>
+    <button type="button" class="btn btn-primary" onclick="show_nasa_cas_certification()">Show/Hide Certificate</button>
+    <div id="nasa-cas-certificate" style="display:none">
+        <img src="../static/images/nasa_cas_design_thinking_course_certificate.jpg" alt="NASA CAS Design Thinking Course Certificate" />
+    </div>
+</div>
+
+<div class="certification">
+    <h3>Structuring Machine Learning Projects</h3>
+    <h5>Professor Andrew Ng with Head Teaching Assistant Kian Katanforoosh and Teaching Assistant Younes Bensouda Mourri</h5>
+    <h5>Issued May 2018</h5>
+    <h4>Description:</h4>
+    <ul>
+        <li>
+            Understand how to diagnose errors in a machine learning system.
+        </li>
+        <li>
+            Be able to prioritize the most promising directions for reducing error.
+        </li>
+        <li>
+            Understand complex machine learning settings, such as mismatched training/test sets, and comparing to and/or surpassing human-level performance.
+        </li>
+        <li>
+            Know how to apply end-to-end learning, transfer, learning, and multi-task learning.
+        </li>
+    </ul>
+    <h4><a href="https://www.coursera.org/account/accomplishments/verify/VBWK3ZZBR8ZZ">Course Certificate</a></h4>
+    <h4><a href="https://www.coursera.org/learn/machine-learning-projects/home/welcome">Course</a></h4>
+</div>
+
+<div class="certification">
+    <h3>Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization</h3>
+    <h5>Professor Andrew Ng with Head Teaching Assistant Kian Katanforoosh and Teaching Assistant Younes Bensouda Mourri</h5>
+    <h5>Issued January 2018</h5>
+    <h4>Description:</h4>
+    <ul>
+        <li>
+            Understand industry best-practices for building deep learning applications.
+        </li>
+        <li>
+            Be able to effectively use the common neural network "tricks", including initialization, L2 and dropout regularization, Batch normalization, and gradient checking.
+        </li>
+        <li>
+            Be able to implement and apply a variety of optimization algorithms, such as mini-batch gradient descent, Momentum, RMSprop and Adam, and check for their convergence.
+        </li>
+        <li>
+            Understand new best-practices for the deep learning era of how to set up train/dev/test sets and analyze bias/variance.
+        </li>
+        <li>
+            Be able to implement a neural network in TensorFlow.
+        </li>
+    </ul>
+    <h4><a href="https://www.coursera.org/account/accomplishments/verify/8AYHSK2FN5J4">Course Certificate</a></h4>
+    <h4><a href="https://www.coursera.org/learn/deep-neural-network/home/welcome">Course</a></h4>
+</div>
+
+<div class="certification">
+    <h3>Neural Networks and Deep Learning</h3>
+    <h5>Professor Andrew Ng with Head Teaching Assistant Kian Katanforoosh and Teaching Assistant Younes Bensouda Mourri</h5>
+    <h5>Issued November 2017</h5>
+    <h4>Description:</h4>
+    <ul>
+        <li>
+            Understand the major technology trends driving Deep Learning.
+        </li>
+        <li>
+            Be able to build, train, and apply fully connected deep neural networks.
+        </li>
+        <li>
+            Know how to implement efficient (vectorized) neural networks.
+        </li>
+        <li>
+            Understand new best-practices for the deep learning era of how to set up train/dev/test sets and analyze bias/variance.
+        </li>
+        <li>
+            Be able to implement a neural network in TensorFlow.
+        </li>
+    </ul>
+    <h4><a href="https://www.coursera.org/account/accomplishments/verify/TDNU2XM8TGHK">Course Certificate</a></h4>
+    <h4><a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome">Course</a></h4>
+</div>
+
+{% endblock %}
