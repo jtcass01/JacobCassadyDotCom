@@ -2,10 +2,186 @@
 
 {% block content %}
 
-<h2>{{ title }}:</h2>
+<center><h1>{{ title }}</h1></center>
 
-<div id="title" class="container-fluid">
-    <p>*Please note: this site is currently undergoing maintenance.  "Who Am I?" and "workhistory" are the only updated sections.*</p>
+<div class="work-experience">
+    <h2>Undergraduate Research Assistant - Next Generation Research Group (NGS)</h2>
+    <h4>University of Louisville Research and Innovation</h4>
+    <h5>Louisville, Kentucky</h5>
+    <h5>Sept 2018 - Present</h5>
+    <button type="button" class="btn btn-primary" onclick="show_ngs()">More Info</button>
+    <div id="ngs-description" style="display:none">
+        <p>
+            This is a paid undergraduate research position under endowed professor Dan Popa in the next Generation Systems Robotics Lab at the Univeristy of Louisville's J.B. Speed School of Engineering.
+            The main project I am helping with is an industrial bin sorting robot we are using to develop optimal algorithms for picking and placing.
+            Additionally, I hope to contribute to the research papers the ph.D student I am working with is producing on his imaging techniques.
+            So far, I have created an API for TCP communication from Robotic Operating System (ROS) nodes to the robot directly by designing both a python and PacScript server.
+            My future work is focused on designing the paths for the robot's tool changer as well as implementing the tool changer's api to grab and release tools from the ROS nodes.
+        </p>
+    </div>
+</div>
+
+
+<div class="work-experience">
+    <h2>Pathways Intern - Flight Software Systems Branch</h2>
+    <h4>NASA Langley Research Center</h4>
+    <h5>Hampton, Virginia</h5>
+    <h5>May 2018 - Present</h5>
+    <button type="button" class="btn btn-primary" onclick="show_larc_2018()">More Info</button>
+    <div id="larc-2018-description" style="display:none">
+        <p>
+            This summer I worked on ARCSTONE, or Achieving Instrument High Accuracy In-Orbit.
+            ARCSTONE is a CubeSat science instrument which aims to develop a model of lunar irradiance as it relates to solar irradiance to provide an additional absolute reference for past, present, and future earth sensing instruments.
+            Currently, ARCSTONE is at Technology Readiness Level (TRL) 4 and must be tested in a relevant environment before it can upgrade to TRL 5.
+            To accomplish this, a system had to be developed to aggregate test data from ARCSTONE as well as auxiliary DSLR cameras into a science data product for the scientists to use and publish.
+        </p>
+
+        <p>
+            The system I developed, ARCSTONE Field Test System (FTS), in Python uses a GUI to display real-time baseline information from ARCSTONE’s spectrometers as well as real-time images from additional DSLR cameras that attempt to document test details such as the amount of cloud coverage over the lunar target and the image frame ARCSTONE’s spectrometers are receiving through the telescope.
+            Additionally, to ease the execution of the field tests, ARCSTONE FTS had a requirement of being able to command, update registers, and retrieve setting information from the ARCSTONE instrument and auxiliary DSLR cameras.
+            To accomplish this, I implemented a central thread that focused on updating GUIs and sending commands.
+            Furthermore, I implemented an individual thread for each sensor which acted as state machine with the possibility of sitting idle or executing continuous capture.
+        </p>
+
+        <p>
+            This system went under a formal review with 4 full-time NASA engineers.
+            This was a great learning experience for me on safe practices when using queues, multiple threads and processes.
+            Additionally, I wrote an official Architecture and Functional Design document for ARCSTONE FTS that was included in the formal review.
+            I really enjoyed getting the opportunity to create a useful application that is currently being used by many members of the ARCSTONE mission team.
+        </p>
+    </div>
+</div>
+
+<div class="work-experience">
+    <h2>Student-Athlete Tutor</h2>
+    <h4>University of Louisville Athletics</h4>
+    <h5>Louisville, Kentucky</h5>
+    <h5>Jan 2018 - Sept 2018 [9 months]</h5>
+    <button type="button" class="btn btn-primary" onclick="show_tutor_2018()">More Info</button>
+    <div id="tutor-2018-description" style="display:none">
+        <ol>
+            <li>Plan and implement weekly sessions with students to promote independent learning.</li>
+            <li>Communicate effectively with the students.</li>
+            <li>Identify and address study skill needs for students in the context of the tutorial session.</li>
+            <li>Prepare and submit accurate records of sessions with student-athletes within 24 hours of the tutoring session.</li>
+            <li>Maintain a high level of knowledge in academic area by prepping prior to your session to keep your skills in the subject matter sharp.</li>
+            <li>Know and comply with policies of Thornton's Academic Center of Excellence that govern the tutoring of student-athletes, particularly NCAA regulations.</li>
+            <li>Comply with the University’s FERPA and Sexual Harassment guidelines.</li>
+            <li>Work with Academic Counselors and Staff to ensure success of the student-athlete.</li>
+            <li>Attend tutor training and meetings as required, completing at least 25 hours of tutoring per semester for CRLA (College Reading & Learning Association) Level I Tutor Certification.</li>
+            <li>Additional duties assigned by Tutorial Coordinator.</li>
+        </ol>
+    </div>
+</div>
+
+<div class="work-experience">
+    <h2>Variable Drag System Software Design Lead</h2>
+    <h4>River City Rocketry</h4>
+    <h5>University of Louisville</h5>
+    <h5>August 2016 - January 2018 [1 year 6 months]</h5>
+    <button type="button" class="btn btn-primary" onclick="show_rocket()">More Info</button>
+    <div id="rocket-description" style="display:none">
+        <p>River City Rocketry (RCR) is University of Louisville's (UofL) rocketry team which competes in NASA's Student Launch (NSL): a yearly competition designed to prepare college students for the Human Exploration and Operations workforce. When joining the team before the start of the Fall semester in 2016, I began with simple tasks such as updating our Variable Drag System's (VDS) Arduino sketch to actuate the motor completely at an altitude of 350m in order to test the drag blades' friction coefficient. Soon I began to pick up additional responsibilities and quickly rose to the position of Software Design Lead for the VDS subsystem which at the time was led by Ben Stringer.</p>
+        <p>During my first semester with the team, I focused on designing the data acquisition system (DAQ) for the VDS. Since Ben and I were both new to working with microcontrollers and microcomputers, the VDS went through several design phases which consisted of a wide variety of hardware. We worked with Arduinos, Beaglebone Blacks, and Raspberry Pis before deciding on a Teensy 3.6. This drove me to study large amounts of documentation sheets as I was responsible for configuring the sensors and controllers to communicate with each other. Furthermore, I led the design and implementation of the software from gathering data from sensors, to deducing information, and storing data.</p>
+        <p>During the Fall Semester, we had several test launches. We were able to use the flight data gathered by the DAQ system to work on improving our sensor frequency, reducing the noise displayed in the data and also analyze other aspects of the flight after launch. I designed the DAQ system in both Python and C/C++ for use on the Raspberry Pi or the Teensy 3.6. The state of the program at the time I left in the winter for my first internship at NASA JSC can be found on my GitHub at https://github.com/jtcass01/VDS2_0. This repository includes proofs of some computations we used to derive information such as velocity using two unique sources (altitude and acceleration).</p>
+        <p>After I left in December, Ben implemented the motor actuation and altitude detection components of the VDS. In the following April, during competition, RCR received the honor of first place in NSL. The Variable Drag System I helped design worked incredibly well, forcing the rocket to apogee at only 22 feet over our 1 mile target (percent-error of ~0.4%). We also received an award for having the best vehicle design but I cannot take any credit for that. It was a true privilege to work with such a talented group of individuals, and we are far from done yet.</p>
+        <p>After finishing my first USRA internship at JSC in the Spring of 2017, I returned to UofL to attend class and work on paving the way for RCR's future. After an ambitious year, many of us were still hungry for more. We set out to design a two-staged, 15 foot rocket to launch at the end of the summer. My role was to design a telemetry system capable of ranges over 10,000 feet as well look ahead to the future of the Variable Drag System and the improvements we could make as it wasn't likely that Ben would return to the team when he finished his internships at Raytheon.</p>
+        <p>To design the telemetry system, I first looked to popular forums such as Reddit and Stack Overflow. From these forums, I got tons of information on how other's developed similar systems for their hobby weather balloons. This gave me a great starting point and a community to reach out to during the initial development stages. In the end, I found DigiKey to be a very reliable and trusted manufacturer of RF sensor modules that could be used for transferring data. After purchasing two RF modules, designing a printed circuit board, and picking out a microcontroller for the ground station and a microcomputer for on board the rocket, Nolan Holden, a pathways intern with the US Navy, and I designed a telemetry test for the two-staged rocket flight.</p>
+        <p>Our goal was to test the range of the RF modules and how transmittance speed is deteriorated by increases in distance. Sadly during the preparation for our launch, one of our antennae was severed while putting the rocket together. We were able to solder the sever but with a severely gimped range.</p>
+        <p>Now, during the Spring of 2018, we have upgraded the VDS's IMU to a VectorNav 100 which provides a much higher frequency of data. These improvements are pushing our team to implement multithreading and multiprocessing to handle these large data sets without hindering our response time. We have upgraded our previous microcontroller (Teensy 3.6) to a Beaglebone Black to give us more CPUs and an operating system to ease the control of the different cores and microcontroller on board the Beaglebone.</p>
+    </div>
+</div>
+
+<div class="work-experience">
+    <h2>USRA Intern - Spacecraft Software Engineering Branch</h2>
+    <h4>NASA Johnson Space Center</h4>
+    <h5>Houston, Texas</h5>
+    <h5>August 2017 - December 2017 [5 months]</h5>
+    <button type="button" class="btn btn-primary" onclick="show_jsc_fall()">More Info</button>
+    <div id="jsc-fall-description" style="display:none">
+        <p>During the Fall of 2017, I worked with the Spacecraft Software Engineering Branch (ER6) at JSC in support of Orion MPCV's Ascent Abort 2 Test (AA2). My project, along with another intern, was to develop an application for decoding and analyzing the Electronic Data Recorders jettisoned during the descent of AA2. Our task was to calculate bit error rates as well as retrieve parameters and work towards plotting different parameters from the data.</p>
+        <p>Since we were the first interns to start the project, we had the luxury of choosing the programming language and eventually designing the program's control flow. We choose Python as our programming language due to the power of its libraries to sift, sort, and apply computations to large matrices while still having a relatively easy to work with GUI library. Since I had experience decoding byte streams after working on a RF telemetry system for my university's rocket team and the other intern had experience designing Java GUIs, we agreed to split the work up with me focusing on the back-end data processor and him focusing on the front-end GUI.</p>
+        <p>The project required me to analyze every byte of multiple sets of 2-4 GBs of data, each carrying data from the same flight recorded at different places on the vehicle, and compare the results to mask any individual errors in the dataset. Due to the large amount of processing required, the project drove me to learn about multithreading, multiprocessing, CPU and memory usage and how to make them the most efficient. Furthermore, to increase processing speed, I was able to utilize several third party libraries such as Pandas and NumPy for handling the data and Ctypes for calling sections of C code from Python.</p>
+    </div>
+</div>
+
+
+<div class="work-experience">
+    <h2>USRA Intern - EVA Management</h2>
+    <h4>NASA Johnson Space Center</h4>
+    <h5>Houston, Texas</h5>
+    <h5>January 2017 - May 2017 [5 months]</h5>
+    <button type="button" class="btn btn-primary" onclick="show_jsc_spring()">More Info</button>
+    <div id="jsc-spring-description" style="display:none">
+        <p>As a USRA Intern at Johnson Space Center I worked with EVA Management (XX) to help develop a searchable database containing over 10 terabytes of engineering records, presentations, test results, and important documents regarding past and developmental space suits. My role was to move over packets of data from different engineering databases into our system as well as organize and classify these large packets of data. To begin this task, I studied a prior intern's classification system as well as took notes on the different space suits, subsystems, document types, and other possible classification data. Next, I wrote a program which pulled metadata from a file using it's file type, file name, and other metadata and used this information to develop a purposed file path within our system. Although I was unable to access either database within a program due to security restrictions, the program was much faster and more precise at developing purposed file locations than someone manually reading through each file. To quantify this, it took my program 3.4 seconds to build a purposed file structure out of 630 files. To accomplish this task, I used multiple programming languages and programming techniques. For web scraping and file structure building I used JavaScript but in order to copy and paste client-side files from one directory to another I decided to use Python.</p>
+    </div>
+</div>
+
+<div class="work-experience">
+    <h2>Volunteer Mentor</h2>
+    <h4>Fern Creek High School</h4>
+    <h5>Louisville, Kentucky</h5>
+    <h5>August 2016 - December 2016 [4 months]</h5>
+    <button type="button" class="btn btn-primary" onclick="show_fchs()">More Info</button>
+    <div id="fchs-description" style="display:none">
+        <p>I volunteered at a disadvantaged high school in Louisville twice a week for three and a half months. While mentoring students at Fern Creek High School, I taught and mentored two separate classes each trimester for two trimesters. During the first trimester, both classes were learning the same material. I helped the students learn how to think like a programmer using Cengage's Visual Logic and later with Python. The students crafted programs to display shapes and math equations and later worked up to a program which calculated compound interest over a set of years. Additionally at the end of the trimester, I helped the students build portfolio websites as well as draft their resumes so they could apply for internships over the summer. During the second trimester, I mentored a new set of students each studying different computer related things. I helped teach the first class the basics of computing and computers and I mentored the second class through the building of 2D games using youtube tutorials on Unity and C#. This was part of a service-learning requirement included in a Computer Based Ethics and Law class I was taking the Fall of 2016. I was the leader for the group of students mentoring at Fern Creek which meant I was the middle man between the professors and the teacher at Fern Creek. Furthermore, our requirement was to mentor two times throughout the semester but since I enjoyed it so much I decided to mentor twice a week throughout the semester instead.</p>
+    </div>
+</div>
+
+
+<div class="work-experience">
+    <h2>Emergency Medical Scribe</h2>
+    <h4>ScribeAmerica</h4>
+    <h5>Louisville, Kentucky</h5>
+    <h5>April 2015 - September 2015</h5>
+    <button type="button" class="btn btn-primary" onclick="show_scribeamerica()">More Info</button>
+    <div id="scribeamerica-description" style="display:none">
+        <p>While working with PhysAssist, the Physician group responsible for staffing all three Norton emergency rooms within Louisville decided to change medical scribe companies. This was due to a new policy set forth by PhysAssist and not due to quality of the scribes that were currently working there. Because of this, many of us scribes were able to seamlessly transfer to ScribeAmerica without going through another training process. My duties as a medical scribe included:</p>
+        <ul>
+            <li>Responding to cardiopulmonary arrest calls.</li>
+            <li>Interpreting medical documents and lab work.</li>
+            <li>Assisting medical doctors, nurse practitioners, and physician's assistants while they saw patients in the emergency room.</li>
+            <li>Crafting medical records using professional jargon and a variety of complex medical terms.</li>
+            <li>Applying communication skills to cultivate trusting relationships with doctors, nurses, and first responders.</li>
+            <li>Exercising time management and critical thinking skills to develop multiple medical records in concession while in a stressful and loud environment.</li>
+            <li>Working long overnight shifts while still performing well in school.</li>
+        </ul>
+        <p>During my time with ScribeAmerica, I was developing programs on the side as a hobby. When I decided becoming a computer engineer was my passion instead of going to medical school, I notified Ms. Belekevich I would be moving on from being a Medical Scribe once the upcoming Fall semester began. Once August came around, Ms. Belekevich offered me a promotion to stay on as the company's only Louisville Hiring Manager tasked with overseeing the hiring process of medical scribes for three emergency rooms and several other outpatient care centers. Although I loved the idea of bringing on new scribes while being able to help shape the emergency rooms I had spent the last several months working in, being able to excel as well as receive the most out of my education at The University of Louisville's J.B. Speed School of Engineering was more important to me. I feared the position as Hiring Manager would require me to work 40 hour weeks and go to school just as I had been doing as a scribe; consequently, I declined the offer and left the medical field.</p>
+    </div>
+</div>
+
+<div class="work-experience">
+    <h2>Emergency Medical Scribe</h2>
+    <h4>PhysAssist Scribes</h4>
+    <h5>Louisville, Kentucky</h5>
+    <h5>December 2014 - April 2015</h5>
+    <button type="button" class="btn btn-primary" onclick="show_physassist()">More Info</button>
+    <div id="physassist-description" style="display:none">
+        <p>
+            With PhysAssist Scribes, I worked as an Emergency Medical Scribe in two separate emergency rooms within Louisville, Ky: Norton Hospital Downtown and Norton Audubon Hospital. Becoming an Emergency Medical Scribe required a weekend study/training course in Chicago, Illinois where we learned pages of medical terminology and practiced filling out a patient's History of Present Illness (HPI), Physical Examination, and Review of Systems (ROS) during a patient-doctor interaction. Additionally, we were taught to determine conditions from patients' lab reports such as hypoxia, tachycardia, and other simple conditions. After our training, we were paired with a Physician, Physician's Assistant, or Nurse Practitioner for each shift and would follow them around to document the previously mentioned items for each patient they saw. During night shifts, we were additionally responsible for responding to all cardiopulmonary arrest calls ("code blue") throughout the hospital. To accomplish this task, scribes had to exercise time management and critical thinking skills to develop multiple medical records in concession while in a stressful and loud environment. To excel within this work place, I had to develop strong communication skills in order to cultivate trusting relationships with the doctors, nurses, and first responders I was working with. Furthermore, being tasked with long overnight shifts and being a full-time student helped me improve upon my work ethic. Working with a different medical professional on a daily basis improved my ability to be versatile and pick up on things at a fast pace.
+        </p>
+    </div>
+</div>
+
+<div class="work-experience">
+    <h2>Sandwich Chef</h2>
+    <h4>Penn Station East Coast Subs</h4>
+    <h5>New Albany, Indiana</h5>
+    <h5>August 2011 - November 2014</h5>
+    <button type="button" class="btn btn-primary" onclick="show_pennstation()">More Info</button>
+    <div id="pennstation-description" style="display:none">
+        <ul>
+            <li>
+                Handled currency and credit transactions while maintaining accuracy.
+            </li>
+            <li>
+                Worked with a team to maintain store while utilizing communication skills to assist customers
+            </li>
+            <li>
+                Trained new employees and assisted with inventory control.
+            </li>
+        </ul>
+    </div>
 </div>
 
 {% endblock %}

@@ -71,7 +71,7 @@ def contact():
     """Renders the contact page."""
     return render_template(
         'contact.html',
-        title='',
+        title='Contact Info',
         year=datetime.now().year,
         message=''
     )
