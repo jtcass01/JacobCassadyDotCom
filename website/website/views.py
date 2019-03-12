@@ -51,7 +51,7 @@ def transcripts():
     """Renders the transcripts page."""
     return render_template(
         'transcripts.html',
-        title='Transcripts',
+        title='University Transcripts',
         year=datetime.now().year,
         message=''
     )
