@@ -4,9 +4,9 @@
 
 <center><h1>{{ title }}</h1></center>
 
-<div class="transcript-year">
+<div class="transcript-year container-fluid text-container">
     <h2>2013</h2>
-    <div class="transcript-semester">
+    <div class="transcript-semester container-fluid">
         <h3>Fall (First semester of pre-med Biology)</h3>
         <table style="width:100%">
           <tr>
@@ -24,6 +24,7 @@
           </tr>
         </table>
         <button type="button" class="btn btn-primary" onclick="show_fall_2013()">Show/Hide Classes</button>
+        <button type="button" class="btn btn-primary">Show/Hide Dean's List Certificate</button>
         <div id="2013-fall" style="display:none">
           <table style="width:100%">
             <tr>
@@ -86,9 +87,9 @@
     </div>
 </div>
 
-<div class="transcript-year">
+<div class="transcript-year container-fluid text-container">
     <h2>2014</h2>
-    <div class="transcript-semester">
+    <div class="transcript-semester container-fluid">
         <h3>Spring</h3>
         <table style="width:100%">
           <tr>
@@ -106,6 +107,7 @@
           </tr>
         </table>
         <button type="button" class="btn btn-primary" onclick="show_spring_2014()">Show/Hide Classes</button>
+        <button type="button" class="btn btn-primary">Show/Hide Dean's List Certificate</button>
         <div id="2014-spring" style="display:none">
           <table style="width:100%">
             <tr>
@@ -167,7 +169,7 @@
         </div>
     </div>
 
-    <div class="transcript-semester">
+    <div class="transcript-semester container-fluid">
         <h3>Summer</h3>
         <table style="width:100%">
           <tr>
@@ -206,7 +208,7 @@
         </div>
     </div>
 
-    <div class="transcript-semester">
+    <div class="transcript-semester container-fluid">
         <h3>Fall</h3>
         <table style="width:100%">
           <tr>
@@ -286,9 +288,9 @@
     </div>
 </div>
 
-<div class="transcript-year">
+<div class="transcript-year container-fluid text-container">
     <h2>2015</h2>
-    <div class="transcript-semester">
+    <div class="transcript-semester container-fluid">
         <h3>Spring (Final semester before changing major.)</h3>
         <table style="width:100%">
           <tr>
@@ -358,8 +360,8 @@
           </table>
         </div>
     </div>
-    <div class="transcript-semester">
-        <h3>Fall (First semester of Computer Engineering/Computer Science)</h3>
+    <div class="transcript-semester container-fluid">
+        <h3>Fall (First semester of Computer Engineering/Computer Science major)</h3>
         <table style="width:100%">
           <tr>
             <th>Term Credit Hours</th>
@@ -376,6 +378,7 @@
           </tr>
         </table>
         <button type="button" class="btn btn-primary" onclick="show_fall_2015()">Show/Hide Classes</button>
+        <button type="button" class="btn btn-primary">Show/Hide Dean's List Certificate</button>
         <div id="2015-fall" style="display:none">
           <table style="width:100%">
             <tr>
@@ -430,9 +433,9 @@
     </div>
 </div>
 
-<div class="transcript-year">
+<div class="transcript-year container-fluid text-container">
     <h2>2016</h2>
-    <div class="transcript-semester">
+    <div class="transcript-semester container-fluid">
         <h3>Spring</h3>
         <table style="width:100%">
           <tr>
@@ -502,7 +505,7 @@
           </table>
         </div>
     </div>
-    <div class="transcript-semester">
+    <div class="transcript-semester container-fluid">
         <h3>Summer</h3>
         <table style="width:100%">
           <tr>
@@ -564,7 +567,7 @@
           </table>
         </div>
     </div>
-    <div class="transcript-semester">
+    <div class="transcript-semester container-fluid">
         <h3>Fall</h3>
         <table style="width:100%">
           <tr>
@@ -582,6 +585,7 @@
           </tr>
         </table>
         <button type="button" class="btn btn-primary" onclick="show_fall_2016()">Show/Hide Classes</button>
+        <button type="button" class="btn btn-primary">Show/Hide Dean's List Certificate</button>
         <div id="2016-fall" style="display:none">
           <table style="width:100%">
             <tr>
@@ -636,9 +640,15 @@
     </div>
 </div>
 
-<div class="transcript-year">
+<div class="transcript-year container-fluid text-container">
     <h2>2017</h2>
-    <div class="transcript-semester">
+
+    <div class="transcript-semester container-fluid">
+        <h3>Spring</h3>
+        <p>USRA Internship at NASA Lyndon B. Johnson Space Center.  Please see the <a href="{{ url_for('work_history') }}">work history</a> page for more information</p>
+    </div>
+
+    <div class="transcript-semester container-fluid">
         <h3>Summer</h3>
         <table style="width:100%">
           <tr>
@@ -708,11 +718,16 @@
           </table>
         </div>
     </div>
+
+    <div class="transcript-semester container-fluid">
+        <h3>Fall</h3>
+        <p>USRA Internship at NASA Lyndon B. Johnson Space Center.  Please see the <a href="{{ url_for('work_history') }}">work history</a> page for more information</p>
+    </div>
 </div>
 
-<div class="transcript-year">
+<div class="transcript-year container-fluid text-container">
     <h2>2018</h2>
-    <div class="transcript-semester">
+    <div class="transcript-semester container-fluid">
         <h3>Spring (First semester as double major, adding Electrical and Computer Engineering as my second.)</h3>
         <table style="width:100%">
           <tr>
@@ -730,6 +745,7 @@
           </tr>
         </table>
         <button type="button" class="btn btn-primary" onclick="show_spring_2018()">Show/Hide Classes</button>
+        <button type="button" class="btn btn-primary">Show/Hide Dean's List Certificate</button>
         <div id="2018-spring" style="display:none">
           <table style="width:100%">
             <tr>
@@ -790,7 +806,13 @@
           </table>
         </div>
     </div>
-    <div class="transcript-semester">
+
+    <div class="transcript-semester container-fluid">
+        <h3>Summer</h3>
+        <p>Pathways Internship at NASA Langley Research Center.  Please see the <a href="{{ url_for('work_history') }}">work history</a> page for more information</p>
+    </div>
+
+    <div class="transcript-semester container-fluid">
         <h3>Fall</h3>
         <table style="width:100%">
           <tr>
@@ -808,6 +830,7 @@
           </tr>
         </table>
         <button type="button" class="btn btn-primary" onclick="show_fall_2018()">Show/Hide Classes</button>
+        <button type="button" class="btn btn-primary">Show/Hide Dean's List Certificate</button>
         <div id="2018-fall" style="display:none">
           <table style="width:100%">
             <tr>

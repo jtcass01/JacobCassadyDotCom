@@ -1,6 +1,6 @@
 body {
     display: block;
-    background-color: black;
+    background-image: url('../images/horsehead_nebula.png');
     color: ghostwhite;
     padding-top: 50px;
     padding-bottom: 20px;
@@ -9,6 +9,12 @@ body {
 .center-img {
     text-align: center;
     display: block;
+}
+
+.text-container {
+  background-color: rgba(40,40,40,0.8);
+  margin: 15px 0px 15px 0px;
+  padding: 15px 15px 15px 15px;
 }
 
 /* Set padding to keep content from hitting the edges */
