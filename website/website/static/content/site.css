@@ -6,6 +6,12 @@ body {
     padding-bottom: 20px;
 }
 
+img {
+    max-width:100%;
+    height: auto;
+    width: auto\9;
+}
+
 .center-img {
     text-align: center;
     display: block;
