@@ -1,0 +1,82 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<center><h1>{{ title }}</h1></center>
+
+<div id="simon-info">
+  <p>Neural Network Models Implemented by Jacob Cassady</p>
+  <p><em>1.1 Team Members</em> - Jacob Cassady, Aaron Fox, Nolan Holdan, Kristi Kidd, Jacob Marcum</p>
+  <ul>
+    <li>Class: Embedded Systems</li>
+    <li>Semester: Spring 2018</li>
+    <li>C and Assembly code developed by Jacob Marcum.</li>
+  </ul>
+  <p><em>1.2 Team Members</em> - Jacob Cassady, Patrick Chuong, Mitchel Johnson, Oscar Leon, Matthew Long</p>
+  <ul>
+    <li>Class: Microcomputer Design</li>
+    <li>Semester: Fall 2018</li>
+    <li>Sections of python code controling LED lights developed by Patrick Chuong and Matthew Long.</li>
+  </ul>
+  <p><a href="https://www.youtube.com/watch?v=DxSEFz9Di6I&t">YouTube Video Demonstrating SIMON 1.2</a></p>
+</div>
+
+<h2>Abstract</h2>
+<p>
+  The purpose of the Sign-Interfaced Machine Operating Network, or SIMON, is to develop a machine learning classifier capable of detecting a discrete set of American Sign Language (ASL) presentations from captured images of a hand and producing a desired response on another system.
+  SIMON can utilize a variety of neural networks (nets) for producing its predictions including a classic deep neural net and a ResNet50 convolutional model.
+  SIMON’s neural nets were trained on 6 targets using 1200 images (200 of each representation).
+  The training and test sets included 1080 and 120 images respectively.
+  SIMON utilizes its neural nets to produce a discrete value from an image input matching the target’s class enumeration.
+  Images for demonstration were taken using a laptop webcam.
+  Predictions are represented in ASCII and are sent across a serial connection to a response machine.
+  This project created a response machine from a Raspberry Pi Model 3 B+, a 5050 LED light strip, and a button.
+  The goal of this project was to produce the correct color response from the LED light strips given an image containing an ASL representation included in our models’ training.
+  This goal was accomplished at its most baseline level although there were some issues and inconsistencies in the neural nets performances including differences in data distributions from training to production as well as distortions in the production data due to preprocessing techniques.
+  SIMON was developed using Python 3.6 as well as a variety of 3rd party modules and tested on both Windows 10 and Ubuntu 17.
+</p>
+
+<h2>Body</h2>
+<p>
+  The purpose of Sign-Interfaced Machine Operating Network, or SIMON, is to develop a machine learning classifier capable of detecting a discrete set of American Sign Language (ASL) presentations from captured images of a hand and producing a desired response on another system.
+  The response system (LED Strip) was developed on a Raspberry Pi 3 B+ utilizing the Raspbian OS and Python 3.6, along with one 5050 LED light strip, and one button.
+</p>
+
+<h3>1. Sign-Interfaced Machine Operating Network (SIMON)</h3>
+<p>
+  SIMON was developed in Python 3.6 and tested on both Windows 10 and Ubuntu 17 operating systems.
+  SIMON has access to two neural network models: the convolutional ResNet50 and a classic fully connected 3-layer deep neural network model.
+  The neural nets were implemented using the keras and tensorflow neural net libraries.
+  Additional 3rd party libraries were utilized for data processing and matrix manipulation including NumPy, scipy, and h5py.
+  Furthermore, tkinter was leveraged for a graphical display during file selection and the pyserial library was utilized for communication with the response system.
+</p>
+
+<h4>1.1	ResNet50 Model</h4>
+<p>
+  Convolutional neural networks utilize a mathematical formula similar to a convolution as well as padding and filters to shape an image while it progresses through a neural net.
+  The use of these convolution-like mathematical operators allow for the training of a greater number of parameters while using less computational power and time than standard forward propagation over a one-dimensional matrix representing an equal number of pixels.
+  This is because convolutional models have fewer connections between neurons and allow for the sharing of parameters.
+  The ResNet50 is a convolutional deep neural network model.
+  It includes 152 layers of neurons as well as over 23.5 million trainable parameters.
+</p>
+
+<p>
+  Previously it was thought that very deep neural networks were impossible to train due to exploding and vanishing gradients <a href="https://pdfs.semanticscholar.org/728d/814b92a9d2c6118159bb7d9a4b3dc5eeaaeb.pdf">(Pascanu, Mikolov, & Bengio, 2012)</a>.
+  The basic concept driving Residual Networks <a href="https://arxiv.org/abs/1512.03385">(He, Xiangyu, Shaoqing, & Jian, 2015)</a> are “skip connections” which hope to solve the issue of exploding or vanishing gradients.
+  A “skip connection” is when you utilize part or all of the activation of one layer to alter the input to a subsequent layer deeper in the neural network.
+  The idea is that these skip connections give sections of the neural net the ability to learn the identity function, allowing the neural net to utilize the maximum number of needed neural layers while making the addition of more layers undamaging to its optimal accuracy.
+  Additionally, it is theorized this ability to learn the identity function yields less of a chance of causing an exploding or vanishing gradient.
+</p>
+
+<h5>1.1.1 Structure</h5>
+<p>
+  The structure of SIMONs ResNet50 model was implemented using notes taken from Professor Andrew Ng’s deeplearning.ai specialization on coursera.
+  The figures displayed in this section were taken from his notes.
+  A generated graph of SIMON’s implemented ResNet50 can be found by clicking the button below.
+  <button type="button" name="button" onclick="show_generated_model">Display ResNet50 Model</button>
+  <div id="resnet50_generated_model" style="display:none">
+    <img src="../static/images/resnet50_generated_model.png" alt="resnet50_generated_model" />
+  </div>
+</p>
+
+{% endblock %}
