@@ -36,6 +36,16 @@ def projects():
         message=''
     )
 
+@app.route('/simon')
+def simon():
+    """Renders the simon project page."""
+    return render_template(
+        'simon.html',
+        title='Sign Interfaced Machine Operating Network (SIMON)',
+        year=datetime.now().year,
+        message=''
+    )
+
 @app.route('/awards_and_certifications')
 def awards_and_certifications():
     """Renders the awards page."""
