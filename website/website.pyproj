@@ -40,6 +40,7 @@
     <Folder Include="website\static\content\" />
     <Folder Include="website\static\fonts\" />
     <Folder Include="website\static\images\" />
+    <Folder Include="website\static\images\rcr\" />
     <Folder Include="website\static\transcripts\" />
     <Folder Include="website\static\scripts\" />
     <Folder Include="website\static\transcripts\2013\" />
@@ -66,6 +67,9 @@
     <Content Include="website\static\images\horsehead_nebula.png" />
     <Content Include="website\static\images\identity_block.png" />
     <Content Include="website\static\images\nasa_cas_design_thinking_course_certificate.jpg" />
+    <Content Include="website\static\images\rcr\flight-mode-current-pseudocode.png" />
+    <Content Include="website\static\images\rcr\flight-mode-future-pseudocode.png" />
+    <Content Include="website\static\images\rcr\full-program-pseudocode.png" />
     <Content Include="website\static\images\resnet50_generated_model.png" />
     <Content Include="website\static\images\resnet50_model.png" />
     <Content Include="website\static\scripts\awards_and_certifications.js" />
@@ -111,8 +115,10 @@
     <Content Include="website\templates\index.html" />
     <Content Include="website\templates\layout.html" />
     <Content Include="website\templates\projects.html" />
+    <Content Include="website\templates\rc8_api.html" />
     <Content Include="website\templates\simon.html" />
     <Content Include="website\templates\transcripts.html" />
+    <Content Include="website\templates\vds.html" />
     <Content Include="website\templates\work_history.html" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />

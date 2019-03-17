@@ -60,6 +60,32 @@ def simon():
         message=''
     )
 
+@app.route('/vds')
+def vds():
+    """Renders the simon project page."""
+    track_event(
+		category='projects',
+		action='vds page visit')
+    return render_template(
+        'vds.html',
+        title='Variable Drag System (VDS)',
+        year=datetime.now().year,
+        message=''
+    )
+
+@app.route('/rc8_api')
+def rc8_api():
+    """Renders the simon project page."""
+    track_event(
+		category='projects',
+		action='rc8_api page visit')
+    return render_template(
+        'rc8_api.html',
+        title='Denso RC8 Python API',
+        year=datetime.now().year,
+        message=''
+    )
+
 @app.route('/awards_and_certifications')
 def awards_and_certifications():
     """Renders the awards page."""
