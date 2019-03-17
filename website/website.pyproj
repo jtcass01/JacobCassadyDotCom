@@ -28,6 +28,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="runserver.py" />
+    <Compile Include="website\google_analytics.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="website\__init__.py" />
     <Compile Include="website\views.py" />
   </ItemGroup>
@@ -48,6 +51,7 @@
     <Folder Include="website\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app.yaml" />
     <Content Include="requirements.txt" />
     <Content Include="website\static\content\bootstrap.css" />
     <Content Include="website\static\content\bootstrap.min.css" />
