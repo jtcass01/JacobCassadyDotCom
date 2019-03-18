@@ -141,20 +141,23 @@ def contact():
 ''' Dean's List Certificate Routes '''
 @app.route('/dean_cert_fall_2013')
 def dean_cert_fall_2013():
-	track_event(
+    """Renders the dean certificate for fall 2013."""
+    track_event(
 		category='contact',
 		action='contact page visit')
-	return send_file(os.getcwd() + os.path.sep + 'website' + os.path.sep + 'static' + os.path.sep + 'transcripts' + os.path.sep + '2013' + os.path.sep + 'dean_cert_fall_2013.pdf')
+    return send_file(os.getcwd() + os.path.sep + 'website' + os.path.sep + 'static' + os.path.sep + 'transcripts' + os.path.sep + '2013' + os.path.sep + 'dean_cert_fall_2013.pdf')
 
 @app.route('/dean_cert_spring_2014')
 def dean_cert_spring_2014():
-	track_event(
+    """Renders the dean certificate for spring 2014."""   
+    track_event(
 		category='contact',
 		action='contact page visit')
-	return send_file(os.getcwd() + os.path.sep + 'website' + os.path.sep + 'static' + os.path.sep + 'transcripts' + os.path.sep + '2014' + os.path.sep + 'dean_cert_spring_2014.pdf')
+    return send_file(os.getcwd() + os.path.sep + 'website' + os.path.sep + 'static' + os.path.sep + 'transcripts' + os.path.sep + '2014' + os.path.sep + 'dean_cert_spring_2014.pdf')
 
 @app.route('/dean_cert_fall_2015')
 def dean_cert_fall_2015():
+	"""Renders the dean certificate for fall 2015."""
 	track_event(
 		category='contact',
 		action='contact page visit')
@@ -162,6 +165,7 @@ def dean_cert_fall_2015():
 
 @app.route('/dean_cert_fall_2016')
 def dean_cert_fall_2016():
+	"""Renders the dean certificate for fall 2016."""
 	track_event(
 		category='contact',
 		action='contact page visit')
@@ -169,6 +173,7 @@ def dean_cert_fall_2016():
 
 @app.route('/dean_cert_spring_2018')
 def dean_cert_spring_2018():
+	"""Renders the dean certificate for spring 2018."""
 	track_event(
 		category='contact',
 		action='contact page visit')
@@ -176,6 +181,7 @@ def dean_cert_spring_2018():
 
 @app.route('/dean_cert_fall_2018')
 def dean_cert_fall_2018():
+	"""Renders the dean certificate for fall 2018."""
 	track_event(
 		category='contact',
 		action='contact page visit')

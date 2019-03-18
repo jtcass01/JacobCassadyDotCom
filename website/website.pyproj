@@ -75,6 +75,7 @@
     <Content Include="website\static\scripts\awards_and_certifications.js" />
     <Content Include="website\static\scripts\bootstrap.js" />
     <Content Include="website\static\scripts\bootstrap.min.js" />
+    <Content Include="website\static\scripts\header.js" />
     <Content Include="website\static\scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="website\static\scripts\jquery-1.10.2.js" />
     <Content Include="website\static\scripts\jquery-1.10.2.min.js" />
