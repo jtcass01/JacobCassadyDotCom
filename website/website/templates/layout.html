@@ -14,22 +14,34 @@
 </head>
 
 <body>
-    <ul class="topnav">
-        <li><a href="{{ url_for('about') }}">About</a></li>
-        <li class="dropdown">
-            <a href="{{ url_for('projects') }}" class="dropbtn">Projects</a>
-            <div class="dropdown-content">
-                <a href="{{ url_for('simon') }}">SIMON</a>
-                <a href="{{ url_for('rc8_api') }}">Denso RC8 Python API</a>
-                <a href="{{ url_for('vds') }}">VDS</a>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-        </li>
-        <li><a href="{{ url_for('awards_and_certifications') }}">Awards/Certifications</a></li>
-        <li><a href="{{ url_for('work_history') }}">Work History</a></li>
-        <li><a href="{{ url_for('transcripts') }}">Transcripts</a></li>
-        <li><a href="{{ url_for('contact') }}">Contact</a></li>
-
-    </ul>    
+            <div class="navbar-collapse collapse">
+                <ul class="topnav">
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li class="dropdown">
+                        <a href="{{ url_for('projects') }}" class="dropbtn">Projects</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('simon') }}">SIMON</a>
+                            <a href="{{ url_for('rc8_api') }}">Denso RC8 Python API</a>
+                            <a href="{{ url_for('vds') }}">VDS</a>
+                        </div>
+                    </li>
+                    <li><a href="{{ url_for('awards_and_certifications') }}">Awards/Certifications</a></li>
+                    <li><a href="{{ url_for('work_history') }}">Work History</a></li>
+                    <li><a href="{{ url_for('transcripts') }}">Transcripts</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <div class="container body-content">
         {% block content %}{% endblock %}
