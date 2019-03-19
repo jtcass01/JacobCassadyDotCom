@@ -138,6 +138,15 @@ def contact():
         message=''
     )
 
+@app.route('/robots.txt')
+def robot():
+    """Renders the dean certificate for fall 2013."""
+    track_event(
+		category='robot',
+		action='robot stopped by')
+    return send_file(os.getcwd() + os.path.sep + 'website' + os.path.sep + 'static' + os.path.sep + 'robots.txt')
+
+
 ''' Dean's List Certificate Routes '''
 @app.route('/dean_cert_fall_2013')
 def dean_cert_fall_2013():
