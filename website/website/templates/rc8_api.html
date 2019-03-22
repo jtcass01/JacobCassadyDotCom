@@ -4,6 +4,150 @@
 
 <center><h1>{{ title }}</h1></center>
 
-<p>*coming soon*</p>
+<div class="text-container">
+    <p>Author: Jacob Taylr Cassady (jtcass01@louisville.edu) - Undergraduate Research Assistant</p>
+    <p>University of Louisville J.B. Speed School of Engineering</p>
+    <p>Next Generation Systems (NGS) Robotics Lab</p>
+
+    <h2>1. Description</h2>
+    <p>
+        This is a Python API with an associated ROS server for communication with a Denso RC8-native server written in PacScript.
+        Previously NGS was utilizing Labview to communication between Robitic Operating System (ROS) nodes and a Denso Industrial Robot.
+        I developed this API and PacScript server for interfacing with the RC8 directly.
+        Since we weren't sure the exact command and communication protocol Labview was using, this ensures well defined instruction sets between our control algorithm and the robot.
+    </p>
+
+    <h2>2. 3rd Party Dependencies</h2>
+    <h3>2.1 Tested Operating Systems</h3>
+    <ul>
+        <li><a href="https://www.ubuntu.com/">Ubuntu 18 Linux Operating System</a></li>
+    </ul>
+    <h3>2.2 Tested Frameworks</h3>
+    <ul>
+        <li><a href="http://wiki.ros.org/melodic">Robotic Operating System (melodic distribution)</a></li>
+        <li><a href="http://wiki.ros.org/kinetic">Robotic Operating System (kinetic distribution)</a></li>
+    </ul>
+    <h3>2.3 Python Modules</h3>
+    <ul>
+        <li><a href="https://pypi.org/project/enum34/">Python 3.4 enum module backported for use in Python 2.7</a></li>
+    </ul>
+
+    <h2>3. Usage</h2>
+    <h3>3.1 Starting the PacScript RC8 Server</h3>
+    <ol>
+        <li>Turn on the RC8 Controller.</li>
+        <li>On the RC8 controller, under settings, set the robot's executable token to TP and the robot's control mode to 'Auto'.</li>
+        <li>Start the program named 'common.pcs'.</li>
+        <li>Turn the motor of the robot on.</li>
+    </ol>
+
+    <h3>3.2 Starting the ROS Server Components</h3>
+    <h4>3.2.1 Initializing the environment</h4>
+    <ol>
+        <li>Open a new commandline</li>
+        <li>Navigate to directory: denso_rc8_api/src/ngs_ros/</li>
+        <li>Delete the directories 'build' and 'devel'. (Only required the first time)</li>
+        <li>Run the following commands:</li>
+    </ol>
+    <ul>
+        <li><code>source /opt/ros/[YOUR_ROS_DISTRO]/setup.bash</code></li>
+        <li><code>catkin_make</code></li>
+        <li><code>source ./devel/setup.bash</code></li>
+        <li><code>roscore</code></li>
+    </ul>
+
+    <h4>3.2.2 Starting the NGS RC8 API Server Node</h4>
+    <p>This server parses and forwards commands to the RC8 PacScript Server.</p>
+    <ol>
+        <li>Open a new commandline</li>
+        <li>Navigate to directory: denso_rc8_api/src/ngs_ros/</li>
+        <li>Run the following commands:</li>
+    </ol>
+    <ul>
+        <li><code>source ./devel/setup.bash</code></li>
+        <li><code>rosrun ngs_denso_rc8_api rc8_api_server.py</code></li>
+    </ul>
+
+    <h4>3.2.3 (Optional) Starting a communication channel with the NGS RC8 API Node</h4>
+    <p>Creates a command-prompt style ROS node for communicating with the NGS RC8 API Server Node</p>
+    <ol>
+        <li>Open a new commandline</li>
+        <li>Navigate to directory: denso_rc8_api/src/ngs_ros/</li>
+        <li>Run the following commands:</li>
+    </ol>
+    <ul>
+        <li><code>source ./devel/setup.bash</code></li>
+        <li><code>rosrun ngs_denso_rc8_api api_communication_channel.py</code></li>
+    </ul>
+
+    <h4>3.2.4 (Optional) Starting a robot state machine to interfaces with the NGS RC8 API Server Node</h4>
+    <ol>
+        <li>Open a new commandline</li>
+        <li>Navigate to directory: denso_rc8_api/src/ngs_ros/</li>
+        <li>Run the following commands:</li>
+    </ol>
+    <ul>
+        <li><code>source ./devel/setup.bash</code></li>
+        <li><code>rosrun ngs_denso_rc8_api robot.py</code></li>
+    </ul>
+
+    <h4>3.2.5 (Optional) Starting a robot state machine to interfaces with the NGS RC8 API Server Node</h4>
+    <ol>
+        <li>Open a new commandline</li>
+        <li>Navigate to directory: denso_rc8_api/src/ngs_ros/</li>
+        <li>Run the following commands:</li>
+    </ol>
+    <ul>
+        <li><code>source ./devel/setup.bash</code></li>
+        <li><code>rosrun ngs_denso_rc8_api controller.py</code></li>
+    </ul>
+
+    <h3>3.3 API Functionality</h3>
+    <h4>3.3.1 Implemented Commands</h4>
+    <h5>3.3.1.1 <a href="https://densorobotics.com/content/user_manuals/19/000207.html">Move Command</a></h5>
+    <p>Moves the robot to designated coordinates.</p>
+    <h6>3.3.1.1.1 Supported DataTypes</h6>
+    <ul>
+        <li><a href="https://densorobotics.com/content/user_manuals/19/000456.html">Position</a></li>
+        <li><a href="https://densorobotics.com/content/user_manuals/19/000457.html">Joint</a></li>
+    </ul>
+    <h6>3.3.1.1.2 Supported Iterpolation Methods</h6>
+    <ul>
+        <li><a href="https://densorobotics.com/content/user_manuals/19/001615.html">Point to Point</a></li>
+        <li><a href="https://densorobotics.com/content/user_manuals/19/001616.html">Linear</a></li>
+    </ul>
+    <h6>3.3.1.1.3 Command Examples</h6>
+    <p><strong>Syntax: </strong>Move motion_interpolation, target_position</p>
+    <ul>
+        <li>Position Example</li>
+        <li><code>Move L, P( 600, 50, 400, 180, 0, 180, -1 )</code></li>
+    </ul>
+    <ul>
+        <li>Joint Example</li>
+        <li><code>Move P, J(10, 20, 30, 40, 50, 60, 70, 80)</code></li>
+    </ul>
+
+    <h5>3.3.1.2 <a href="https://densorobotics.com/content/user_manuals/19/000193.html">Draw Command</a></h5>
+    <p>To move from the current position to a relative position.</p>
+    <h6>3.3.1.2.1 Supported DataTypes</h6>
+    <ul>
+        <li><a href="https://densorobotics.com/content/user_manuals/19/000455.html">Vector</a></li>
+    </ul>
+    <h6>3.3.1.2.2 Supported Iterpolation Methods</h6>
+    <ul>
+        <li><a href="https://densorobotics.com/content/user_manuals/19/001615.html">Point to Point</a></li>
+        <li><a href="https://densorobotics.com/content/user_manuals/19/001616.html">Linear</a></li>
+    </ul>
+    <h6>3.3.1.2.3 Command Examples</h6>
+    <p><strong>Syntax: </strong>Move motion_interpolation, position_vector</p>
+    <ul>
+        <li><code>Draw L, V( 50, 10, 50 )</code></li>
+    </ul>
+
+    <h2>4. References</h2>
+    <ul>
+        <li><a href="https://densorobotics.com/content/user_manuals/19/001301.html">Denso Robotics RC8 Programmer's Manual</a></li>
+    </ul>
+</div>
 
 {% endblock %}
