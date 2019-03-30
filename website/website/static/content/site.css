@@ -17,6 +17,9 @@ img {
     display: block;
 }
 
+.bg {
+}
+
 .text-container {
   background-color: rgba(40,40,40,0.9);
   margin: 15px 0px 15px 0px;

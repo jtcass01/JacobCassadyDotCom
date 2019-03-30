@@ -1,0 +1,176 @@
+﻿{% extends "layout.html" %}
+
+{% block content %}
+
+<center><h1>{{ title }}</h1></center>
+
+<div class="text-container">
+    <p>
+        ARCSTONE Field Test System (FTS) is a GUI application for providing a dynamic quick look of what is occurring during upcoming field tests of the ARCSTONE sprectral instrument at NASA Langley Research Center.
+    </p>
+    <p>
+        Specfications:
+    </p>
+    <ul>
+        <li>OS Developed On: Windows 10</li>
+        <li>Python Version: 3.6</li>
+        <li>3rd Party modules: numpy, matplotlib, construct, PyQt5, PyInstaller</li>
+        <li>Camera Interface: DigiCamControl</li>
+        <li>One-click executable created using: pyinstaller</li>
+    </ul>
+
+    <p>
+        Author(s):
+    </p>
+    <ul>
+        <li>Jacob Taylor Cassady</li>
+    </ul>
+
+
+    <h2>1. What is ARCSTONE?</h2>
+    <p>
+        Achieving Instrument High Accuracy In-Orbit or ARCSTONE, is a mission at NASA Langley Research Center (LaRC) in concession with Resonon, Inc., Laboratory for Atomospheric and Space Physics at UC Boulder (LASP), Quartus Engineering, National Institute of Standards and Technology (NIST), and the United States Geological Survey (USGS).
+        Currently in space, there are several devices released by NASA and others which aim to develop an understanding of the Earth's energy budget.
+        Since the Earth gather's almost all of its energy from the Sun, these devices aim to determine the amount of solar irradiance.
+        Although these devices do a great job of understanding the amount of energy hitting the earth, they fail to account for additional sources which shift these values and dampen our ability to accurately determine the amount of energy coming from the sun only.
+        ARCSTONE attempts to rectify this problem by determining the amount of irradiance coming from the next largest source, the moon.
+        Since the lunar irradiance is largely dependent upon the solar irradiance, an apples to apples comparision needs to be made between the Sun and Moon in a short interval.
+        Developing an understanding of this mechanism will allow us to correct all previous, current, and future spectral sensors by using the information from ARCSTONE to develop a lasting model of lunar irradiance as it relates to solar irradiance.
+    </p>
+    <p>
+        For more information on the ARCSTONE mission please visit: <a href="https://arcstone.larc.nasa.gov/">https://arcstone.larc.nasa.gov/</a>
+    </p>
+
+    <h2>2. Installation of Items Needed For Running and Building ARCSTONE FTS</h2>
+    <p>
+        A list of software requirements for building and running ARCSTONE FTS outside of the one-click executable developed for ease of use.
+    </p>
+    <h3>2.1 Installing Python 3.6</h3>
+    <p>
+        This system is developed entirely in Python.
+        For downloading the specific version of Python (3.6) please visit: <a href="https://www.python.org/downloads/release/python-365rc1/">https://www.python.org/downloads/release/python-365rc1/</a>.
+        Python versions greater than 3.4 come bundled with pip which is used for many subsequent software installations.
+        If pip is not installed, installation information can be found here: <a href="https://pip.pypa.io/en/stable/installing/">https://pip.pypa.io/en/stable/installing/</a>.
+        Calls for upgrading pip can be found below.
+    </p>
+    <p>
+        Linux or MacOS
+    </p>
+    <code>
+        pip install -U pip
+    </code>
+    <p>
+        Windows
+    </p>
+    <code>
+        python -m pip install --upgrade pip
+    </code>
+
+    <h3>2.2 Installing Third-Party Modules and Programs</h3>
+    <p>
+        Installing all 3rd party modules should be done with pip.
+        Additionally, DigiCamControl is needed for communication with additional cameras used during the ARCSTONE field test.
+    </p>
+    <h4>2.2.1 NumPy (1.14.4)</h4>
+    <p>
+        NumPy is the fundamental package for scientific computing with Python.
+        For more information on NumPy please visit: <a href="http://www.numpy.org/">http://www.numpy.org/</a>.
+    </p>
+    <code>
+        python -m pip install numpy
+    </code>
+
+    <h4>2.2.2 MatPlotLib (2.2.2)</h4>
+    <p>
+        MatPlotLib is a 2D plotting library for Python.
+        It includes many functions similar to MATLAB.
+        For more information on matplotlib please visit: <a href="https://matplotlib.org/">https://matplotlib.org/</a>.
+    </p>
+    <code>
+        python -m pip install matplotlib
+    </code>
+
+    <h4>2.2.3 Construct (2.9.45)</h4>
+    <p>
+        Construct is a parser and builder for binary data.
+        It is used for mapping out the structure of the ScienceEvent binary file.
+        For more information on Construct please visit: <a href="https://construct.readthedocs.io/en/latest/">https://construct.readthedocs.io/en/latest/</a>.
+    </p>
+    <code>
+        python -m pip install construct
+    </code>
+
+    <h4>2.2.4 PyQt5 (5.10.1)</h4>
+    <p>
+        PyQt5 is a Python binding for the Qt application framework.
+        It is used to construct the GUIs for ARCSTONE FTS.
+        For more information on PyQt5 please visit: <a href="http://pyqt.sourceforge.net/Docs/PyQt5/">http://pyqt.sourceforge.net/Docs/PyQt5/</a>.
+        For more information on Qt please visit: <a href="https://www.qt.io/">https://www.qt.io/</a>.
+    </p>
+    <code>
+        python -m pip install PyQt5
+    </code>
+
+
+    <h4>2.2.5 PyInstaller (3.3.1)</h4>
+    <p>
+        PyInstaller is used to generate the executable for transferring ARCSTONE FTS without the required dependencies.
+        For more information on PyInstaller please visit: <a href="https://www.pyinstaller.org/">https://www.pyinstaller.org/</a>.
+    </p>
+    <p>
+        Installation:
+    </p>
+    <code>
+        python -m pip install PyInstaller
+    </code>
+    <p>
+        Example creation of onefile executable:
+    </p>
+    <code>
+        "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python36_64\Scripts\pyinstaller.exe" --onefile --icon=ARCSTONE_icon.ico --clean ARCSTONE_FTS.py
+    </code>
+
+
+    <h4>2.2.6 DigiCamControl</h4>
+    <p>
+        DigiCamControl is used to interface with cameras across the command line.
+        This interface is wrapped in ARCSTONE FTS within the Camera.py module.
+        For downloading DigiCamControl as well as documentation please visit: <a href="http://digicamcontrol.com/">http://digicamcontrol.com/</a>.
+    </p>
+
+    <h2>3. ARCSTONE FTS Capabilities</h2>
+    <p>
+        ARCSTONE Field Test System focuses on tracking parameters important during field tests as well as providing a display of the binary images produced by ARCSTONE's spectrometers, SWIR and VIS.
+        These field tests are being performed by NASA LaRC and are to take place over the Summer and later this year.
+    </p>
+    <p>
+        Current Capabilities:
+    </p>
+    <ol>
+        <li>GUI Display</li>
+        <li>Display of ScienceEvent data</li>
+        <li>Display of VIS images</li>
+    </ol>
+    <h3>3.1 GUI Display</h3>
+    <p>
+        Development of a GUI to quickly and dynamically understand what is happening during the field test improves the chance of a successful test.
+        This is because errors in implementation may be quickly located while in the field and fixed without having to return to our lab to diagnose the logged data.
+        For the development of the GUI, ARCSTONE FTS makes use of a third-party library PyQT5 which acts as a wrapper on the popular C++ GUI framework QT.
+    </p>
+
+    <h3>3.2 Display of ScienceEvent Data</h3>
+    <p>
+        Tests with the ARCSTONE system are compiled into ScienceEvent files which contain the frames taken and associated information from the test.
+        These ScienceEvent files are binary byte data and are mapped within ARCSTONE FTS using the Construct python module described in 2.2.3 of this document.
+    </p>
+
+    <h3>3.3 Display of VIS Images</h3>
+    <p>
+        VIS is a spectrometer device developed by the ARCSTONE team using a series of lenses and a camera.
+        Since the VIS and the SWIR are the most important devices for ARCSTONE's gathering of data it is important to make sure our images are being produced from FSW and transmitted to GSE correctly before concluding our test.
+        A quick reference to these images from ARCSTONE FTS would greatly increase our chances of a successful field test.
+        To display these binary images, ARCSTONE FTS makes use of the matplotlib library.
+    </p>
+</div>
+
+{% endblock %}

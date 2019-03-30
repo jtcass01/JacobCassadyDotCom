@@ -60,6 +60,19 @@ def simon():
         message=''
     )
 
+@app.route('/arcstone_fts')
+def arcstone_fts():
+    """Renders the simon project page."""
+    track_event(
+		category='projects',
+		action='ARCSTONE FTS page visit')
+    return render_template(
+        'arcstone_fts.html',
+        title='Achieving Instrument High Accuracy In-Orbit (ARCSTONE)',
+        year=datetime.now().year,
+        message=''
+    )
+
 @app.route('/vds')
 def vds():
     """Renders the simon project page."""

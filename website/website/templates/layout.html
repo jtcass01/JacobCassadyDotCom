@@ -15,6 +15,7 @@
 
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
+        <a href="/" class="navbar-brand">JacobTaylorCassady.com</a>
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -30,6 +31,7 @@
                         <a href="{{ url_for('projects') }}" class="dropbtn">Projects</a>
                         <div class="dropdown-content">
                             <a href="{{ url_for('simon') }}">SIMON</a>
+                            <a href="{{ url_for('arcstone_fts') }}">ARCSTONE FTS</a>
                             <a href="{{ url_for('rc8_api') }}">Denso RC8 Python API</a>
                             <a href="{{ url_for('vds') }}">VDS</a>
                         </div>
